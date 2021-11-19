@@ -371,7 +371,7 @@ def check_general_form_one(driver,caed_ar):
 def check_general_form2(driver,caed_ar):
 
 	card_number=caed_ar[0]
-	extract_bin=" [ "+card_number[0:7]+" ] "
+	extract_bin=" [ "+card_number[0:8]+" ] "
 
 
 	try:
