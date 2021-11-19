@@ -463,6 +463,7 @@ def lets_play(serv,ops):
 		driver = webdriver.Firefox(service=serv, options=ops)
 		driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
 		# driver.set_page_load_timeout(79)
+		driver.set_page_load_timeout(79)
 
 		print(emoji.emojize("Ok "' :check_mark_button: :alien:'))
 		driver.get("https://www.stan.com.au/")
