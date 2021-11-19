@@ -325,14 +325,14 @@ def check_general_form_one(driver,caed_ar):
 		# input('')
 		if "Please use a different card," in url_get_text:
 			add_to_last_bin()
-			telegram_msg="DECLINE "+extract_bin+card_number
+			telegram_msg="DECLINE :interrobang: "+extract_bin+card_number
 			send_msg(telegram_msg)
 			fill_form_tow(driver,url_get_text)
 
 		#form__input -feedback -error -m-half
 		if "try again" in url_get_text:
 			add_to_last_bin()
-			telegram_msg="DECLINE "+extract_bin+card_number
+			telegram_msg="DECLINE :interrobang: "+extract_bin+card_number
 			send_msg(telegram_msg)
 			fill_form_tow(driver,url_get_text)
 
@@ -353,8 +353,8 @@ def check_general_form_one(driver,caed_ar):
 			# fill_form_tow(driver,url_get_text)
 
 		if "try again." in url_get_text:
-			# msg_text="INCORECT :interrobang  :interrobang   ["+caed_ar[0]+" ]"
-			telegram_msg="INCORECT :interrobang  "+extract_bin+card_number
+			# msg_text="INCORECT :interrobang:  :interrobang   ["+caed_ar[0]+" ]"
+			telegram_msg="INCORECT :interrobang:  "+extract_bin+card_number
 			add_to_last_bin()
 			send_msg(telegram_msg)
 
@@ -379,13 +379,13 @@ def check_general_form2(driver,caed_ar):
 		URL_BUTTON=WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div[2]/div[2]/div[2]/div/div[2]/div[1]/p')))
 		url_get_text=URL_BUTTON.text
 		if "Please use a different card," in url_get_text:
-			telegram_msg="DECLINE "+extract_bin+card_number
+			telegram_msg="DECLINE :interrobang: "+extract_bin+card_number
 			add_to_last_bin()
 			send_msg(telegram_msg)
 			fill_form_tow(driver,url_get_text)
 
 		if "try again" in url_get_text:
-			telegram_msg="INCORECT :interrobang  "+extract_bin+card_number
+			telegram_msg="INCORECT :interrobang:  "+extract_bin+card_number
 			add_to_last_bin()
 			send_msg(telegram_msg)
 
@@ -405,7 +405,7 @@ def check_general_form2(driver,caed_ar):
 			end_success(driver)
 
 		if "try again" in url_get_text:
-			telegram_msg="INCORECT   :interrobang  "+extract_bin+card_number
+			telegram_msg="INCORECT   :interrobang:  "+extract_bin+card_number
 			add_to_last_bin()
 			send_msg(telegram_msg)
 
