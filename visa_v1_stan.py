@@ -274,6 +274,8 @@ def fill_form_tow(driver,url_get_text):
 	time.sleep(1)
 	CARD_RD_CASE=WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="encryptedCardNumber"]')))
 	CARD_RD_CASE.click()
+	CARD_RD_CASE.send_keys(Keys.CONTROL+'a' )
+	CARD_RD_CASE.send_keys(Keys.BACKSPACE )
 	CARD_RD_CASE.send_keys(caed_ar[0])
 	# CARD_RD_CASE.send_keys(Keys.TAB*2,caed_ar[1])
 	# CARD_RD_CASE.send_keys(Keys.TAB*2,caed_ar[2])
