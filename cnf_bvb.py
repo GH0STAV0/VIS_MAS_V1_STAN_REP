@@ -20417,14 +20417,14 @@ user_agent = random.choice(user_agent_list)
 
 ##URLS 
 #firefox_options_binary = "/root/EXTRA/firefox-49.0b9/firefox/firefox"
-# new_driver_path = '/usr/bin/geckodriver13'
+new_driver_path = '/usr/bin/geckodriver13'
 # new_binary_path = '/root/EXTRA/firefox-53.0b9/firefox/firefox'
 
 ########################
 #new_binary_path = '/root/EXTRAT/firefox/firefox'
 #new_binary_path = '/root/EXTRA/firefox-53.0b9/firefox/firefox'
 # new_driver_path = '/usr/bin/geckodriver222'
-new_driver_path = '/usr/bin/geckodriver22'
+# new_driver_path = '/usr/bin/geckodriver22'
 
 # new_binary_path = '/root/EXTRA/firefox-53.0b8/firefox/firefox'
 # new_binary_path = '/root/EXTRA/firefox-49.0b9/firefox/firefox'
@@ -20435,8 +20435,8 @@ new_driver_path = '/usr/bin/geckodriver22'
 # new_binary_path = '/root/EXTRA/firefox-59.0b9/firefox/firefox'
 
 def random_fir():
-	# firefox_version=['53.0.2','53.0b9']
-	firefox_version=['57.0.1','58.0.1','59.0b9','60.0.1esr']
+	firefox_version=['53.0.2','53.0b9']
+	# firefox_version=['57.0.1','58.0.1','59.0b9','60.0.1esr']
 	random_firefox_version=random.choice(firefox_version)
 	print("[ "+random_firefox_version +" ]", end=" ")
 	new_binary_path="/root/EXTRAT/firefox-"+random_firefox_version+"/firefox/firefox"
