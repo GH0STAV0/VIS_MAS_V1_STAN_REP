@@ -249,7 +249,7 @@ def fill_form_one(driver,url_get_text):
 	#button -blue -form -full
 	START_BUTTON=WebDriverWait(driver, 11).until(EC.presence_of_element_located((By.XPATH, '//*[@id="app"]/div[2]/div[2]/div[2]/div/div[2]/div[1]/form/button')))
 	START_BUTTON.click()
-	time.sleep(7)
+	time.sleep(5)
 
 
 	#
