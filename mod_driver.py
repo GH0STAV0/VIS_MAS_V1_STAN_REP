@@ -64,7 +64,7 @@ def build_driver(width,height):
 
 		# fp.set_preference('network.proxy.socks', '127.0.0.1')
 		# fp.set_preference('network.proxy.socks_port', 9150)
-		fp.set_preference('permissions.default.stylesheet', 2)
+		# fp.set_preference('permissions.default.stylesheet', 2)
 		fp.set_preference('permissions.default.image', 2)
 		fp.set_preference("dom.webdriver.enabled", False)
 		fp.set_preference('useAutomationExtension', False)
