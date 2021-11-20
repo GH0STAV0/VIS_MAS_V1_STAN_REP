@@ -289,6 +289,8 @@ def fill_form_tow(driver,url_get_text):
 
 	time.sleep(1)
 	CARD_EXP_DATE_CASE.click()
+	CARD_EXP_DATE_CASE.send_keys(Keys.CONTROL+'a' )
+	CARD_EXP_DATE_CASE.send_keys(Keys.BACKSPACE )
 	CARD_EXP_DATE_CASE.send_keys(caed_ar[1])
 	time.sleep(1)
 	# CARD_EXP_DATE_CASE.send_keys(Keys.TAB*2, caed_ar[2])

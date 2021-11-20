@@ -1,0 +1,8 @@
+1637376771831	geckodriver	INFO	Listening on 127.0.0.1:42403
+1637376773052	geckodriver::marionette	INFO	Starting browser /root/EXTRAT/firefox-53.0.2/firefox/firefox with args ["-marionette", "--width=1170", "--height=2532"]
+1637376778504	Marionette	INFO	Listening on port 46079
+1637376778626	Marionette	WARN	TLS certificate errors will be ignored for this session
+1637386591596	geckodriver	INFO	Listening on 127.0.0.1:36101
+1637386592830	geckodriver::marionette	INFO	Starting browser /root/EXTRAT/firefox-53.0.2/firefox/firefox with args ["-marionette", "--width=2560", "--height=1440"]
+1637386600069	Marionette	INFO	Listening on port 34467
+1637386600199	Marionette	WARN	TLS certificate errors will be ignored for this session
