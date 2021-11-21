@@ -11,7 +11,7 @@ from selenium.webdriver.firefox.options import Options as options
 from selenium.webdriver.firefox.options import Options as Firefox_Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import random,datetime,string , os ,time ,subprocess , sys , requests ,re
+import random,datetime,string , os ,time ,subprocess , sys , requests ,re , socket
 from selenium.webdriver import ActionChains
 import json
 import pickle
@@ -34,9 +34,11 @@ sys_use_agent=re.findall('\(.*?\)',user_agent)[0]
 ########################################################################################################################################
 
 def send_msg(text):
+	hostt=socket.getfqdn()
+	mmssg= " [ "+hostt+" ]"+text
    token = "2137513961:AAGENlwIUQnfvbKZX64-fZ72R_oStto8oFo"
    chat_id = "-643828126"
-   url_req = "https://api.telegram.org/bot" + token + "/sendMessage" + "?chat_id=" + chat_id + "&text=" + text 
+   url_req = "https://api.telegram.org/bot" + token + "/sendMessage" + "?chat_id=" + chat_id + "&text=" + mmssg 
    results = requests.get(url_req)
    print(results.json())
 
