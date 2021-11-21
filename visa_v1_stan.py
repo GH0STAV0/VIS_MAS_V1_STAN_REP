@@ -564,7 +564,7 @@ def starting_tasks():
 ######################USER AGENT ###################################################
 
 	try:
-		display = Display(visible=1, size=(width,height)).start()
+		display = Display(visible=0, size=(width,height)).start()
 		stage_1()### CLEAR
 		# os.system("curl -sx socks5://127.0.0.1:9050 ifconfig.co | grep -oP '(?<=Your IP</span>: ).*(?=</span>)'")
 		# mod_vpn.fnc_vpn ()
