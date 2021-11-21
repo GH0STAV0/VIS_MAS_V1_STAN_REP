@@ -574,6 +574,7 @@ def starting_tasks():
 		# os.system("curl -sx socks5://127.0.0.1:9050 ifconfig.co | grep -oP '(?<=Your IP</span>: ).*(?=</span>)'")
 		#build_driver()###### BUILDING DRIVER
 		lets_play(serv,ops)
+		display.stop()
 		clean_up()
 
 	except Exception as error:
