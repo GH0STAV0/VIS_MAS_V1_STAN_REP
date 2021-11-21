@@ -235,14 +235,14 @@ def fill_form_one(driver,url_get_text):
 	driver.switch_to.default_content()
 	print("CARD_EXP_DATE_CASE")
 	# input("5")
-	time.sleep(1)
+	# time.sleep(1)
 	driver.switch_to.frame(driver.find_elements_by_tag_name("iframe")[2])
 	time.sleep(1)
 	CARD_CVV_CASE=WebDriverWait(driver, 8).until(EC.presence_of_element_located((By.XPATH, '//*[@id="encryptedSecurityCode"]')))
 	CARD_CVV_CASE.click()
 	# time.sleep(2)
 	CARD_CVV_CASE.send_keys(caed_ar[2])
-	time.sleep(1)
+	# time.sleep(1)
 	driver.switch_to.default_content()
 	time.sleep(1)
 	# CARD_RD_CASE.send_keys(Keys.ENTER)
@@ -453,7 +453,7 @@ def lets_play(serv,ops):
 
 	try:
 		print("OPEN DISPLAY  WEB-SITE ...... ",end='',flush=True)
-		# display = Display(visible=1, size=(width,height)).start()
+		# 
 		print(emoji.emojize("Ok "' :check_mark_button: :alien:'))
 
 	except Exception as error:
@@ -564,6 +564,7 @@ def starting_tasks():
 ######################USER AGENT ###################################################
 
 	try:
+		display = Display(visible=1, size=(width,height)).start()
 		stage_1()### CLEAR
 		# os.system("curl -sx socks5://127.0.0.1:9050 ifconfig.co | grep -oP '(?<=Your IP</span>: ).*(?=</span>)'")
 		# mod_vpn.fnc_vpn ()
