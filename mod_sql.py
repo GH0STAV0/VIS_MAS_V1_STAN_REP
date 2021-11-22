@@ -5,7 +5,7 @@ from datetime import datetime
 
 bot_name='bot_tow'
 
-last_bin="50000000"
+# last_bin="50000000"
 
 today_date = datetime.today().strftime('%d-%m-%Y')
 
@@ -37,7 +37,9 @@ def check_connect_mysql():
 		# fix_mysql(str(e))
 
 
-def update_to_db(bin0,bot_name):
+def update_to_db(bin0):
+	check_connect_mysql()
+	print(" UPDATE_SQL BIN [ "+last_bin+" ] : ",end='',flush=True)
 
 	mydb = mysql.connector.connect(host="remotemysql.com",user="f6V3kVwxvH",passwd="sOVnW1130i",database="f6V3kVwxvH")
 	mycursor = mydb.cursor()
@@ -50,7 +52,7 @@ def update_to_db(bin0,bot_name):
 	mycursor.execute(sql,input)
 	# time.sleep(2)
 	mydb.commit()
-	print("MYSQL updated OK ")
+	print("[ SUCCED ] ")
 
 
 
@@ -61,9 +63,9 @@ def update_to_db(bin0,bot_name):
 
 
 
-check_connect_mysql()
 
-update_to_db(last_bin,bot_name)
+
+update_to_db(last_bin)
 # insert_to_db()
 
 

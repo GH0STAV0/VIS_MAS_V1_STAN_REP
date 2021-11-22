@@ -17,6 +17,8 @@ import json
 import pickle
 import bin00
 import t00l_
+import mod_sql
+
 
 ###########global urls_BVB
 # urls_BVB=cnf_bvb.random_url
@@ -667,6 +669,7 @@ def add_to_last_bin():
 	#################
 	with open("last_bin","w") as file_bin:
 		file_bin.write(binani)
+	mod_sql.update_to_db(binani)
 
 def save_successed_bin(card_numer):
 	# l_bin=read_the_last_bin()
