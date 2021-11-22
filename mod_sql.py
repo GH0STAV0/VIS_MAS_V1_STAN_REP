@@ -39,7 +39,7 @@ def check_connect_mysql():
 
 def update_to_db(bin0):
 	check_connect_mysql()
-	print(" UPDATE_SQL BIN [ "+last_bin+" ] : ",end='',flush=True)
+	print(" UPDATE_SQL BIN [ "+bin0+" ] : ",end='',flush=True)
 
 	mydb = mysql.connector.connect(host="remotemysql.com",user="f6V3kVwxvH",passwd="sOVnW1130i",database="f6V3kVwxvH")
 	mycursor = mydb.cursor()
