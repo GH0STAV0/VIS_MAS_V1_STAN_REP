@@ -65,7 +65,7 @@ def update_to_db(bin0):
 
 
 
-update_to_db(last_bin)
+# update_to_db(last_bin)
 # insert_to_db()
 
 
